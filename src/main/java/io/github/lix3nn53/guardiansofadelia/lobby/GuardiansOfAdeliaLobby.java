@@ -3,6 +3,7 @@ package io.github.lix3nn53.guardiansofadelia.lobby;
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
+import io.github.lix3nn53.guardiansofadelia.lobby.commands.CommandResourcePack;
 import io.github.lix3nn53.guardiansofadelia.lobby.events.*;
 import org.bukkit.Bukkit;
 import org.bukkit.Difficulty;
@@ -20,6 +21,7 @@ import java.util.Set;
 
 public class GuardiansOfAdeliaLobby extends JavaPlugin implements PluginMessageListener {
 
+    public static final String ResourcePackAddress = "https://drive.google.com/uc?export=download&id=1ubOvoMmHT-6biMURNiKav9K9jXSX3cgx";
     public static HashMap<String, Integer> serverToPlayerCount = new HashMap<>();
     public static HashMap<String, Integer> serverToPort = new HashMap<>();
 
@@ -48,6 +50,10 @@ public class GuardiansOfAdeliaLobby extends JavaPlugin implements PluginMessageL
         Bukkit.getPluginManager().registerEvents(new MyPlayerPortalEvent(), this);
         Bukkit.getPluginManager().registerEvents(new MyPlayerQuitEvent(), this);
         Bukkit.getPluginManager().registerEvents(new MyPlayerResourcePackStatusEvent(), this);
+        Bukkit.getPluginManager().registerEvents(new MyRegisterEvent(), this);
+
+
+        this.getCommand("rp").setExecutor(new CommandResourcePack());
 
         for (World w : Bukkit.getServer().getWorlds()) {
             w.setDifficulty(Difficulty.HARD);
