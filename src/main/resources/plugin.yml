@@ -1,0 +1,9 @@
+main: io.github.lix3nn53.guardiansofadelia.lobby.GuardiansOfAdeliaLobby
+name: GuardiansOfAdeliaLobby
+version: '0.1'
+description: GuardiansOfAdelia MMORPG project
+load: POSTWORLD
+api-version: 1.13
+author: Lix3nn
+website: guardiansofadelia.com
+prefix: GoA-Lobby
