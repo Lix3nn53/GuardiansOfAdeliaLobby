@@ -35,9 +35,9 @@ public class MyPlayerInteractEvent implements Listener {
                 }else{
                     Vector dir = p.getLocation().getDirection();
                     if(dir.getY() < 0.5){
-                        dir.setY(1D);
+                        dir.setY(0.5);
                     }
-                    p.setVelocity(dir.multiply(5));
+                    p.setVelocity(dir.multiply(3));
                     GuardiansOfAdeliaLobby.rocketCooldown.add(p);
                     new BukkitRunnable() {
 
