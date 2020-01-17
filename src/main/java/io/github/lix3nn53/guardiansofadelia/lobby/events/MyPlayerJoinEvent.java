@@ -14,6 +14,9 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MyPlayerJoinEvent implements Listener {
 
     @EventHandler
@@ -29,30 +32,18 @@ public class MyPlayerJoinEvent implements Listener {
             p.removePotionEffect(effect.getType());
         }
 
-        ItemStack firework = new ItemStack(Material.FIREWORK_ROCKET);
-        ItemMeta im = firework.getItemMeta();
-        im.setDisplayName(ChatColor.GOLD + "UP!!");
-        firework.setItemMeta(im);
-
-        ItemStack elytra = new ItemStack(Material.LIGHT_BLUE_WOOL, 1);
-        ItemMeta im2 = elytra.getItemMeta();
-        im2.setDisplayName(ChatColor.AQUA + "Elytra equip/unequip!");
-        elytra.setItemMeta(im2);
+        p.getInventory().setChestplate(new ItemStack(Material.ELYTRA));
 
         ItemStack compass = new ItemStack(Material.COMPASS);
         ItemMeta im3 = compass.getItemMeta();
-        im3.setDisplayName(ChatColor.GREEN + "Server Compass");
+        im3.setDisplayName(ChatColor.GREEN + "Connect to servers");
+        List<String> lore = new ArrayList<>();
+        lore.add("");
+        lore.add(ChatColor.GRAY + "Right click while holding to use");
+        im3.setLore(lore);
         compass.setItemMeta(im3);
 
-        ItemStack clock = new ItemStack(Material.NETHER_STAR);
-        ItemMeta im4 = clock.getItemMeta();
-        im4.setDisplayName(ChatColor.YELLOW + "Lobby Star");
-        clock.setItemMeta(im4);
-
         p.getInventory().setItem(0, compass);
-        p.getInventory().setItem(1, clock);
-        p.getInventory().setItem(2, firework);
-        p.getInventory().setItem(3, elytra);
 
         GuardiansOfAdeliaLobby.joinCooldown.add(p);
 

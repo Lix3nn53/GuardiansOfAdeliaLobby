@@ -21,7 +21,7 @@ import java.util.Set;
 
 public class GuardiansOfAdeliaLobby extends JavaPlugin implements PluginMessageListener {
 
-    public static final String ResourcePackAddress = "https://drive.google.com/uc?export=download&id=1ubOvoMmHT-6biMURNiKav9K9jXSX3cgx";
+    public static final String ResourcePackAddress = "https://drive.google.com/uc?export=download&id=1SNr-HrzYxhHPZ9yZ0Lf1F2PTl_b5aCXI";
     public static HashMap<String, Integer> serverToPlayerCount = new HashMap<>();
     public static HashMap<String, Integer> serverToPort = new HashMap<>();
 
