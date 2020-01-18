@@ -22,7 +22,7 @@ public class CommandResourcePack implements CommandExecutor {
             if (args.length < 1) {
                 player.sendMessage(ChatColor.YELLOW + "/rp load");
             } else if (args[0].equals("load")) {
-                player.setResourcePack(GuardiansOfAdeliaLobby.ResourcePackAddress);
+                //player.setResourcePack(GuardiansOfAdeliaLobby.ResourcePackAddress);
             }
             // If the player (or console) uses our command correct, we can return true
             return true;

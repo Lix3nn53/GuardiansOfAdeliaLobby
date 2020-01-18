@@ -21,7 +21,7 @@ import java.util.Set;
 
 public class GuardiansOfAdeliaLobby extends JavaPlugin implements PluginMessageListener {
 
-    public static final String ResourcePackAddress = "https://drive.google.com/uc?export=download&id=1SNr-HrzYxhHPZ9yZ0Lf1F2PTl_b5aCXI";
+    //public static final String ResourcePackAddress = "https://drive.google.com/uc?export=download&id=1SNr-HrzYxhHPZ9yZ0Lf1F2PTl_b5aCXI";
     public static HashMap<String, Integer> serverToPlayerCount = new HashMap<>();
     public static HashMap<String, Integer> serverToPort = new HashMap<>();
 
@@ -53,7 +53,7 @@ public class GuardiansOfAdeliaLobby extends JavaPlugin implements PluginMessageL
         Bukkit.getPluginManager().registerEvents(new MyRegisterEvent(), this);
 
 
-        this.getCommand("rp").setExecutor(new CommandResourcePack());
+        //this.getCommand("rp").setExecutor(new CommandResourcePack());
 
         for (World w : Bukkit.getServer().getWorlds()) {
             w.setDifficulty(Difficulty.HARD);

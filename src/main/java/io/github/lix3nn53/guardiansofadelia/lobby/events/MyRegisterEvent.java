@@ -16,6 +16,6 @@ public class MyRegisterEvent implements Listener {
                 ChatColor.YELLOW +"of " + ChatColor.GREEN + "Adelia " + ChatColor.YELLOW + "]", 20, 80, 20);
         p.setFoodLevel(20);
 
-        p.setResourcePack(GuardiansOfAdeliaLobby.ResourcePackAddress);
+        //p.setResourcePack(GuardiansOfAdeliaLobby.ResourcePackAddress);
     }
 }

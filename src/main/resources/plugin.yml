@@ -7,8 +7,3 @@ api-version: 1.13
 author: Lix3nn
 website: guardiansofadelia.com
 prefix: GoA-Lobby
-commands:
-  rp:
-    description: Resource pack command
-    permission: guardian.player
-    permission-message: You do not have permission!
