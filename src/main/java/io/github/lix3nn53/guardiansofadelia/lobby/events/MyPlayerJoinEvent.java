@@ -60,10 +60,12 @@ public class MyPlayerJoinEvent implements Listener {
 
             @Override
             public void run() {
-                cancel();
                 p.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
                 p.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, Integer.MAX_VALUE, 1));
+                p.sendTitle(net.md_5.bungee.api.ChatColor.GREEN + "Welcome!", net.md_5.bungee.api.ChatColor.YELLOW + "[ " + net.md_5.bungee.api.ChatColor.GOLD +"Guardians " +
+                        net.md_5.bungee.api.ChatColor.YELLOW +"of " + net.md_5.bungee.api.ChatColor.GREEN + "Adelia " + net.md_5.bungee.api.ChatColor.YELLOW + "]", 20, 80, 20);
+                p.setFoodLevel(20);
             }
-        }.runTaskTimer(GuardiansOfAdeliaLobby.getInstance(), 30L, 30L);
+        }.runTaskLater(GuardiansOfAdeliaLobby.getInstance(), 10L);
     }
 }

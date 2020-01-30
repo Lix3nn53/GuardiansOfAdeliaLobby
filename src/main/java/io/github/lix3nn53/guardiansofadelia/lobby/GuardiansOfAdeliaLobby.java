@@ -42,7 +42,6 @@ public class GuardiansOfAdeliaLobby extends JavaPlugin implements PluginMessageL
         Bukkit.getPluginManager().registerEvents(new MyEntitySpawnEvent(), this);
         Bukkit.getPluginManager().registerEvents(new MyFoodLevelChangeEvent(), this);
         Bukkit.getPluginManager().registerEvents(new MyInventoryClickEvent(), this);
-        Bukkit.getPluginManager().registerEvents(new MyLoginEvent(), this);
         Bukkit.getPluginManager().registerEvents(new MyPlayerDeathEvent(), this);
         Bukkit.getPluginManager().registerEvents(new MyPlayerDropItemEvent(), this);
         Bukkit.getPluginManager().registerEvents(new MyPlayerInteractEvent(), this);
@@ -50,7 +49,6 @@ public class GuardiansOfAdeliaLobby extends JavaPlugin implements PluginMessageL
         Bukkit.getPluginManager().registerEvents(new MyPlayerPortalEvent(), this);
         Bukkit.getPluginManager().registerEvents(new MyPlayerQuitEvent(), this);
         Bukkit.getPluginManager().registerEvents(new MyPlayerResourcePackStatusEvent(), this);
-        Bukkit.getPluginManager().registerEvents(new MyRegisterEvent(), this);
 
 
         //this.getCommand("rp").setExecutor(new CommandResourcePack());
